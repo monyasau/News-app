@@ -9,7 +9,10 @@ let NewsComponent = () => {
   });
 
   const updateNewsQuery = (queryName) => (event) => {
-   
+    setNewsQuery((prevNewsQuery) => ({
+      ...prevNewsQuery,
+      [queryName]: event.target.value,
+    }));
     // newsQuery.queryName = event.target.value;
     // setNewsQuery(newsQuery);
     console.log(queryName, event.target.value);
