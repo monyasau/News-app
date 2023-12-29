@@ -40,6 +40,24 @@ let NewsComponent = () => {
 
   return (
     <>
+      <div className="">
+        <div className="max-w-screen-lg mx-auto py-12">
+          <div className="w-full border rounded h-16 p-4 ">
+<div>
+  <h1 className=" text-3xl">
+    A simple news app
+  </h1>
+</div>
+
+<div className="border">
+  <select name="category"  id="catergory">
+    <option value="sport">sport</option>
+    <option value="technology">technology</option>
+    <option value="business">business</option>
+  </select>
+
+
+
       <input
         type="text"
         placeholder="category"
@@ -50,7 +68,15 @@ let NewsComponent = () => {
         placeholder="country"
         onChange={updateNewsQuery("country")}
       />
-      <pre>{JSON.stringify(newsData, null, 2)}</pre>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      {/* <pre>{JSON.stringify(newsData, null, 2)}</pre> */}
     </>
   );
 };
